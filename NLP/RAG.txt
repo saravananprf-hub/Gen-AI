@@ -1,0 +1,67 @@
+WHAT IS RAG?
+    -->It stands for Retrieval Augmented Generation,it is an AI Technique which retreives
+    the relevant data from the external sources and LLM generates structured output.
+    -->RAG we use for custom chatbots.
+EXAMPLE:
+    -->Customer support chatbots
+    
+why not LLM?
+    -->It is a foundation model which is already trained with vast amount of data
+    to perform text generation tasks.
+    -->It is not having all the information
+    
+RAG ARCHITECTURE:
+1)Data loader ?
+    -->loading the informations from external sources like pdf,word,text,csv.
+
+2)Text Normalization ?
+    -->Cleaning or removing unwanted data from the document.
+    -->This helps to reduce the tokens and make RAG model to understand
+    the context to generate poper Result.
+
+3)Chunking ?
+    -->It converts or splits the document into small parts and that small part we call it as chunk.
+WHY Chunking?
+    -->RAG Model can't understand the context if we load the entire document(content)
+    -->It helps RAG model to retreive the actual contet based on user query.
+
+4)Embeddings ?
+    -->It is a way of converting chunks into vectors(numerical representatiion of chunks).
+    -->RAG model can't understand the context(text format) directly,
+    so we'er converting chunks to vectors.
+    -->Here we use sentence transformers model for vectorization and
+    it uses encoder-only transformers architecture.
+
+5)Vector DB ?
+    -->Stores the vector into DB
+    -->here we'er storing this(vectors into Vector DB) for the retreival part.
+    -->we FAISS,CHROMA,PG-VECTOR DB'S.
+
+6)User Query ?
+    -->Prompt of instructions to retreive the relavant chunks.
+
+7)TOKENIZATION ?
+    -->It is process of converting the text (query) into small parts.
+    -->that small part we call it as token.
+WHY TOKENIZATION ?
+    -->LLM understands the context with tokens.
+                       (or)
+    -->we can say to make llm to understand the context we'er using Tokenization.
+
+8)Searching the releant chunks for user query from the vector database.
+    -->THIS IS CALLED RETREIVER
+    1)-->KNN(Educlidean Distance)
+    2)-->Cosine similarity.
+    3)-->Dot Product.
+
+9)Structing the output
+    -->here we use LLM models to structure the output which is given by the
+    Retrivere(relevant data from vector db)
+WHY THIS STEP?
+    -->Because In vector database we'er not storing the data in a structured way,
+    so LLM is required to structure the text output.
+
+
+WHAT IS LANGCHAIN ?
+    -->It is framework for LLM and a python library which is used for creating agents,
+    to build entire RAG architecture,support multiple agents.

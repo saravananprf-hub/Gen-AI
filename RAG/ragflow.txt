@@ -1,0 +1,100 @@
+RAG PIPELIE:😂🤣
+step--1
+DATA LOADER
+   -->Word
+   -->pdf
+   .txt
+   How ? and which tool do we use for this?
+   langchain(framework)
+   Interview Questions:
+   -->how you will extract text information from (pdf with txt)?
+          -->langchain
+   --> pdf with image?
+        -->inside image text content,soultion -> OCR(optical character recognition)(inside ocr we have paddle ocr)
+        -->graph based image,solution -> VLM(vision language model)
+      
+        OCR?
+            --> with help of this paddle ocr model we can extract the text inside image
+        VLM?(vision language model)
+            --> we can get summary or description about graph.    
+       
+        How will you handle if pdf is having both text and image content?
+        -->Hybrid
+        1--> text = langchain
+        2--> image= VLM or OCR deends on scenario
+
+        -->merge both text(one from langchain document loader and second from VLM or OCR)
+        before splitting the documents into multiple parts.
+-------------------------------------------------------------------
+for text you can use langchain                                     |
+for image based you can use OCR or VLM (that based on scenario)    |
+--------------------------------------------------------------------
+
+STEP-->2
+TEXT NORMALIZATION
+    1)page numbers
+    2)unwanted chagrcters(removing emoji's ,spl character,punctuations)
+    3)exapand the Words (example => didn't)did not ,example 2-->ASAP
+    4)correcting the words(not possibe to correct all the words)
+    .
+    .
+    .
+    10)
+
+NLP
+1)nltk(natural langugae tool key)
+2)spacy
+
+STEP-->3
+    chunking=> converting the document into multiple parts
+    tool => langchain
+
+STEP-->4
+Embeddings => converts chunks into numbers(vectors)
+Tools : langchain
+Technique : transformers(encoder only architecture)
+#What is Embedding in NLP?
+    -->Embedding is the process of converting text, words, or other data into numerical vectors
+       that machines can understand.
+    -->In simple words, computers understand numbers better than human language.
+       Embeddings convert words or sentences into numbers while capturing their meaning and relationships.
+
+STEP-->5
+vectors
+Tool : langchain
+DB   :(FAISS)facebook ai similarity search
+
+STEP-->6
+User Query(Prompt)
+
+STEP-->7
+TOKENIZATION
+    --> splitting the text into small(multiple) parts 
+    Tool => langchain and python scripts
+
+
+STEP-->8
+Query Embeddings
+    Tool => langchain
+    Technique => Embeddings(converts text into vectors)
+
+STEP-->9
+Retrieval (Extracting the relevant documents from vector database)
+Technique : similarity search
+
+statistics concepts:
+    1--> cosine similarity
+    2--> euclidean distance(KNN)
+
+Interview Questions?
+    (ques)RAG uses which algorithm for the Retrieval?
+    (ans)KNN algorithm(Educlidean Formula)
+
+STEP-->10
+LLM(large language model)
+Tool => langchain
+    - this we use to structure the output
+
+LLM MODELS:
+    1) gemini-3.5-flash
+    2) qwene2

@@ -1,0 +1,12 @@
+What is RAG in AI?
+
+    -->RAG stands for Retrieval-Augmented Generation.
+    -->RAG is an AI technique that allows a Large Language Model (LLM) to retrieve information from 
+external documents or databases and use that information to generate accurate, relevant answers.
+    -->In simple words, RAG helps an AI answer questions using your own data instead of relying only on the information it learned during training.
+
+What is Embedding in NLP?
+    -->Embedding is the process of converting text, words, or other data into numerical vectors
+    that machines can understand.
+    -->In simple words, computers understand numbers better than human language.
+    Embeddings convert words or sentences into numbers while capturing their meaning and relationships.
