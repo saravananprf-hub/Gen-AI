@@ -1,0 +1,3 @@
+LCEL ?
+    -->its stands for launching expression language
+    -->prompt+llm+parser(parser is similar to typecasting) with the help of => '|'
